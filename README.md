@@ -1,7 +1,7 @@
 # 💻 Consumo de API com React Js e Axios
 
 Foi ultilizado o **[Axios](https://axios-http.com/docs/intro)** para consumir uma **API** em uma aplicação **React**. Você poderá
-**consultar** por meio de uma pesquisa a **temperatura** de qualquer cidade.
+**consultar** por meio de um campo de pesquisa a **temperatura** de qualquer cidade.
 
 # ⚙️ Tecnologias usadas neste projeto
 - [Vite](https://vitejs.dev/)
