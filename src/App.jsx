@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { api } from './services/api'
 import { FaTemperatureHigh, FaWind } from 'react-icons/fa'
@@ -8,7 +8,6 @@ function App() {
   const [city, setCity] = useState('');
   const [search, setSearch] = useState('');
 
-
   async function handleGetWeather(event) {
     event.preventDefault();
 
@@ -17,9 +16,6 @@ function App() {
     setCity(search)
     setWeather(response.data)
   }
-  useEffect(() => {
-    handleGetWeather()
-  }, [search])
 
   return (
     <div className="App">
