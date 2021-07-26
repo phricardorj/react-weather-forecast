@@ -1,7 +1,7 @@
-# 💻 Aula ao vivo do Processo Seletivo Santander Coders sobre consumo de API com React Js 
+# 💻 Consumo de API com React Js e Axios
 
-Foi ultilizado o [Axios](https://axios-http.com/docs/intro) para consumir uma API em uma aplicação React. Neste projeto, você poderá
-consultar por meio de uma pesquisa a temperatura de qualquer cidade.
+Foi ultilizado o **[Axios](https://axios-http.com/docs/intro)** para consumir uma **API** em uma aplicação **React**. Você poderá
+**consultar** por meio de uma pesquisa a **temperatura** de qualquer cidade.
 
 # ⚙️ Tecnologias usadas neste projeto
 - [Vite](https://vitejs.dev/)
@@ -13,7 +13,7 @@ consultar por meio de uma pesquisa a temperatura de qualquer cidade.
 
 ### Usuário
 
-Você poderá [clicar aqui](https://weather-forecast-rust.vercel.app/) para usar acessar o projeto on-line e testar agora mesmo! 
+Você poderá [clicar aqui](https://weather-forecast-rust.vercel.app/) para **acessar** o projeto on-line e testar agora mesmo! 
 
 ### Desenvolvedor
 
