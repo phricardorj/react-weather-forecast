@@ -11,18 +11,18 @@ Foi ultilizado o **[Axios](https://axios-http.com/docs/intro)** para consumir um
 
 # Como usar? 
 
-### Usuário
+### 😁 Usuário
 
 Você poderá [clicar aqui](https://weather-forecast-rust.vercel.app/) para **acessar** o projeto on-line e testar agora mesmo! 
 
-### Desenvolvedor
+### 👨‍🚀 Desenvolvedor
 
 #### Primeiro você deverá clonar o projeto
 ```
 git clone https://github.com/phricardorj/weather-forecast.git
 ```
 
-#### Instalar as dependências
+#### Depois você deverá instalar as dependências
 ```yarn install``` ou ```npm install```
 
 ## 🖖 Autor<br>
