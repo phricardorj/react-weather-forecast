@@ -21,6 +21,7 @@ function App() {
   return (
     <div className="App">
       <header>
+        <h1>🌥️ Clima ReactJS</h1>
         <p id="info">Pesquise pelo nome da cidade</p>
         <form onSubmit={handleGetWeather}>
           <input type="text" value={search} onChange={(event) => setSearch(event.target.value)} />
