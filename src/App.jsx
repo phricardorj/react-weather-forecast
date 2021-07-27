@@ -4,15 +4,16 @@ import { api } from './services/api'
 import { FaTemperatureHigh, FaWind } from 'react-icons/fa'
 
 function App() {
-  const [weather, setWeather] = useState(null);
-  const [city, setCity] = useState('');
-  const [search, setSearch] = useState('');
+  
+  const 
+   [weather, setWeather] = useState(null),
+   [city, setCity] = useState(''),
+   [search, setSearch] = useState('');
 
   async function handleGetWeather(event) {
     event.preventDefault();
 
     const response = await api.get(search)
-    console.log(response)
     setCity(search)
     setWeather(response.data)
   }
