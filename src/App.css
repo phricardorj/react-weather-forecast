@@ -29,6 +29,7 @@ html, body {
 
 .container .app header {
   padding-top: 20px;
+  font-size: 1.5rem;
 }
 
 .container .app code {
@@ -36,18 +37,37 @@ html, body {
   padding: 10px;
 }
 
+.container .app #version {
+  color: #00fd13;
+}
+
+
 .container .app #info {
   padding: 20px;
 }
 
-.container .app form input{
-  outline: 0;
-  box-shadow: 0;
-  border-radius: 30px;
-  border: 1px solid #cacaca;
+input {
+  border: none;
   width: 100%;
-  padding: 10px;
+  outline: none;
+  font-size: 1.2rem;
 }
+
+.input-icon-wrap {
+  border: 1px solid #cacaca;    
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.input-icon-wrap Icon {
+  border: none;
+  flex: 1;
+  cursor: pointer !important;
+}
+
+
 
 .container .app  form button{
   outline: 0;
@@ -55,9 +75,10 @@ html, body {
   border: none;
   border-radius: 30px;
   margin-top: 10px;
-  padding: 10px;
+  padding: 15px;
   width: 100%;
   background: #00fd13;
+  font-size: 1.2rem;
 }
 
 .container .app main h1{
@@ -75,7 +96,7 @@ footer{
   width: 100%;
   position: absolute;
   bottom: 0;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   padding: 10px;
   background: #00fd13;
 }
