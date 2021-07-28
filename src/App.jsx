@@ -4,6 +4,7 @@ import { api } from './services/api'
 import { Icon } from '@iconify/react'
 import bookmarkIcon from '@iconify-icons/bi/bookmark'
 import bookmarkFill from '@iconify-icons/bi/bookmark-fill'
+import bubbleLoading from '@iconify-icons/eos-icons/bubble-loading'
 
 function App() {
   const [data, setData] = useState(null),
@@ -13,7 +14,7 @@ function App() {
   async function handleGetWeather(event) {
     event.preventDefault()
 
-    document.querySelector('button').innerText = "Carregando..."
+    document.querySelector('button').innerText = "<Icon icon={bubbleLoading} /> Carregando..."
 
     const response = await api.get(
       'weather?q=' +
