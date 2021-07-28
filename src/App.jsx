@@ -14,9 +14,10 @@ function App() {
     const response = await api.get(
       'weather?q=' +
       search +
-        ',br&units=metric&appid=94330ca3439ac3ac99ddbdd0e800e8fb&mode=json&lang=pt_br'
+        ',br&units=metric&appid=94330ca3439ac3ac99ddbdd0e800e8fb&mode=json&lang=pt_br', 
+      { crossDomain: true }
     )
-
+    
     setData(response.data)
     setCity(response.data.name)
 
