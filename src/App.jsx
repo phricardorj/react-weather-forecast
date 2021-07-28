@@ -14,7 +14,7 @@ function App() {
     const response = await axios.get(
       'http://api.openweathermap.org/data/2.5/weather?q=' +
       search +
-        ',br&units=metric&appid=02a28381f4d4d767fc39773a37b777c4&mode=json&lang=pt_br'
+        ',br&units=metric&appid=94330ca3439ac3ac99ddbdd0e800e8fb&mode=json&lang=pt_br'
     )
 
     setData(response.data)
