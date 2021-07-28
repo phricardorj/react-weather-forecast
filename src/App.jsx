@@ -1,69 +1,73 @@
 import React, { useState } from 'react'
 import './App.css'
-import { api } from './services/api'
-import { FaTemperatureHigh, FaWind } from 'react-icons/fa'
+import axios from 'axios'
 
 function App() {
-  
-  const 
-   [weather, setWeather] = useState(null),
-   [city, setCity] = useState(''),
-   [search, setSearch] = useState('');
+  const [data, setData] = useState(null),
+    [search, setSearch] = useState(''),
+    [city, setCity] = useState('');
+
 
   async function handleGetWeather(event) {
-    event.preventDefault();
+    event.preventDefault()
 
-    const response = await api.get(search)
-    setCity(search)
-    setWeather(response.data)
+    const response = await axios.get(
+      'http://api.openweathermap.org/data/2.5/weather?q=' +
+      search +
+        ',br&units=metric&appid=02a28381f4d4d767fc39773a37b777c4&mode=json&lang=pt_br'
+    )
+
+    setData(response.data)
+    setCity(response.data.name)
+
+    console.log(response.data)
   }
 
   return (
-    <div className="App">
-      <header>
-        <h1>🌥️ Clima ReactJS</h1>
-        <p id="info">Pesquise pelo nome da cidade</p>
-        <form onSubmit={handleGetWeather}>
-          <input type="text" value={search} onChange={(event) => setSearch(event.target.value)} />
-          <button >Search</button>
-        </form>
-      </header>
+    <div className="container">
+      <div className="app">
+        <header>
+          <h1>🌥️ Clima Brasil</h1>
+          <code>Aplicação React Js</code>
+          <code>v1.2</code>
 
-      {weather &&
-        <main>
+          <p id="info">Pesquise abaixo:</p>
+          <form onSubmit={handleGetWeather}>
+            <input
+              type="text"
+              value={search}
+              onChange={event => setSearch(event.target.value)}
+              placeholder="Digite a cidade aqui..."
+            />
+            <button>Pesquisar</button>
+          </form>
+        </header>
 
-          <h1>{city}</h1>
+        {data && (
+          <main>
+            <h1>{city}</h1>
 
-          <section className='current-weather'>
-            <h2>Current weather</h2>
+            <section className="current-weather">
 
-            <p>{weather.temperature}</p>
-            <p>{weather.description}</p>
+              <img
+                src={
+                  'http://openweathermap.org/img/wn/' +
+                  data.weather[0]['icon'] +
+                  '.png'
+                }
+              ></img>
+              <p>Temperatura: {data.main.temp} °C</p>
+              <p>Descrição: {data.weather[0]['description']}</p>
+              <p>Chuva: {data.clouds.all} %</p>
+              <p>Umidade: {data.main.humidity} %</p>
+              <p>Pressão: {data.main.pressure} hPa</p>
+              <p>Vento: {data.wind['deg']} °</p>
+              <p>Velocidade do Vento: {data.wind['speed']} m/s</p>
 
-          </section>
-
-          <section className='forecast'>
-            <h2>Forecast</h2>
-            <ol>
-              {
-                weather.forecast.map(day =>
-                  <li>
-                    <div>
-                      <FaTemperatureHigh />
-                      <p>{day.temperature}</p>
-                    </div>
-
-                    <div>
-                      <FaWind />
-                      <p>{day.wind}</p>
-                    </div>
-                  </li>
-                )
-              }
-            </ol>
-          </section>
-        </main>
-      }
+            </section>
+          </main>
+        )}
+      </div>
     </div>
   )
 }

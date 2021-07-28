@@ -1,115 +1,86 @@
-.App {
-  background: linear-gradient(#121212, #00fd13);
-  height: 100vh;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #000;
+}
+
+.container {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.container .app header {
+  padding-top: 20px;
+}
+
+.container .app code {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
 }
 
-#info {
-  display: block;
-  text-align: center;
-  align-items: center;
-  font-size: 20px;
+.container .app #info {
+  padding: 20px;
 }
 
-.App input,
-.App button {
-  border: 0;
-  border-radius: 16px;
-  color: #fff;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 12px;
-  height: 36px;
-  margin-top: 15px;
+.container .app form input{
+  outline: 0;
+  box-shadow: 0;
+  border-radius: 30px;
+  border: 1px solid #cacaca;
+  width: 100%;
+  padding: 10px;
 }
 
-.App header form {
-  display: flex;
-  gap: 5px;
-  width: 50%;
-  margin-left: 25%;
+.container .app  form button{
+  outline: 0;
+  box-shadow: 0;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  background: #00fd13;
 }
 
-.App input {
-  padding: 8px 24px;
-  border-radius: 16px;
-  background-color: rgba(0, 0, 0, 0.55);
-  opacity: 90%;
-  flex: 1;
+.container .app main h1{
+  color: #00fd13;
+  font-size: 2rem;
+  padding-top: 20px;
 }
 
-.App button {
-  background-color: #00fd13;
-  color: #121212;
-  transition: 0.2s ease-in-out;
+.container .app main h2{
+  color: #000;
+  font-size: 1rem;
 }
 
-.App button:hover {
-  background-color: #09bb18;
+footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8rem;
+  padding: 10px;
+  background: #00fd13;
 }
 
-.App main {
-  margin: 36px 0px;
-}
-
-.App h1 {
-  text-align: center;
-  margin: 36px 0px;
-}
-
-.App h2 {
-  font-weight: 400;
-  margin-bottom: 18px;
-}
-
-.App section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  margin: 72px 0;
-}
-
-.current-weather p {
-  font-size: 48px;
-}
-
-.current-weather p + p {
-  font-size: 32px;
-}
-
-.forecast ol {
-  list-style: none;
-}
-
-.forecast ol li {
-  padding: 8px 24px;
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 16px;
-
-  display: flex;
-  justify-content: space-between;
-}
-
-.forecast ol li + li {
-  margin-top: 8px;
-}
-
-.forecast ol li h3 {
-  font-weight: 400;
-  min-width: 120px;
-  text-align: left;
-}
-
-.forecast ol li div {
-  display: flex;
-  min-width: 90px;
-}
-
-.forecast ol li div svg {
-  font-size: 18px;
-  margin-right: 8px;
+footer p{
+text-align: center;
+color: #000;
 }
