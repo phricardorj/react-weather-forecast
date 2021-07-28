@@ -14,7 +14,7 @@ function App() {
   async function handleGetWeather(event) {
     event.preventDefault()
 
-    document.querySelector('button').innerText = "<Icon icon={bubbleLoading} /> Carregando..."
+    document.querySelector('button').innerText = "Carregando..."
 
     const response = await api.get(
       'weather?q=' +
