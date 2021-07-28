@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import axios from 'axios'
+import { api } from './services/api'
 
 function App() {
   const [data, setData] = useState(null),
@@ -11,8 +11,8 @@ function App() {
   async function handleGetWeather(event) {
     event.preventDefault()
 
-    const response = await axios.get(
-      'http://api.openweathermap.org/data/2.5/weather?q=' +
+    const response = await api.get(
+      'weather?q=' +
       search +
         ',br&units=metric&appid=94330ca3439ac3ac99ddbdd0e800e8fb&mode=json&lang=pt_br'
     )
