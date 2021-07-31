@@ -61,10 +61,9 @@ input {
   border-radius: 30px;
 }
 
-.input-icon-wrap Icon {
-  border: none;
+.input-icon-wrap  {
   flex: 1;
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 
@@ -90,6 +89,30 @@ input {
 .container .app main h2{
   color: #000;
   font-size: 1rem;
+}
+
+.fav-inline {
+  display: flex;
+  flex-wrap: initial;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.fav-btn {
+  display: table;
+  margin: 5px;
+  background: rgba(0, 253, 19, 1);
+  color: #000;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+.fav-txt {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 footer{
