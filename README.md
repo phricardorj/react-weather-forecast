@@ -1,9 +1,5 @@
 # 🌡️ Consumo de API que retorna a temperatura de qualquer cidade com React Js e Axios
 
-<div align="center">
-<img src="app_print.png" alt="Print do Projeto Final disponível On-line" height="450px" width="relative">
-</div>
-
 Foi ultilizado o **[Axios](https://axios-http.com/docs/intro)** para consumir uma **API** em uma aplicação **React**. Você poderá
 **consultar** por meio de um campo de pesquisa a **temperatura** de qualquer cidade.
 
