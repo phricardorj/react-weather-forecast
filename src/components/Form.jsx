@@ -5,12 +5,13 @@ import { api } from '../services/api'
 function Form() {
   const [data, setData] = useState(null),
     [search, setSearch] = useState(''),
+    [button, setButton] = useState('Pesquisar'),
     [favData, setFavData] = useState(['rio de janeiro', 'curitiba', 'salvador'])
 
   async function handleGetWeather(event) {
     event.preventDefault()
 
-    document.querySelector('button').innerText = 'Carregando...'
+    setButton('Carregando...')
 
     const response = await api.get(
       'weather?q=' +
@@ -18,7 +19,7 @@ function Form() {
         ',br&units=metric&appid=baedc2f2f31b7b3303e5d42d88d283c3&mode=json&lang=pt_br'
     )
 
-    document.querySelector('button').innerText = 'Pesquisar'
+    setButton('Pesquisar')
 
     setData(response.data)
   }
@@ -38,7 +39,7 @@ function Form() {
           />
         </div>
 
-        <button>Pesquisar</button>
+        <button>{button}</button>
       </form>
 
       {favData && (
