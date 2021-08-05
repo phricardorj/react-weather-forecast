@@ -7,7 +7,7 @@ Foi ultilizado o **[Axios](https://axios-http.com/docs/intro)** para consumir um
 - [Vite](https://vitejs.dev/)
 - [React](https://pt-br.reactjs.org/)
 - [Axios](https://axios-http.com/docs/intro)
-- [WeatherApi](https://github.com/robertoduessmann/weather-api/)
+- [Open Weather Map](https://openweathermap.org/)
 
 # Como usar? 
 
