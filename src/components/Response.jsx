@@ -14,6 +14,7 @@ function Response(props) {
 
   return (
     <>
+      <i className="wi wi-night-sleet" />
       <code>Ícone: {iWeather}</code>
       <h1>{props.data.name}</h1>
       <p>Temperatura: {parseInt(props.data.main.temp)} °C</p>

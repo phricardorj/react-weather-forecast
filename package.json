@@ -10,7 +10,8 @@
     "bootstrap": "^5.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "weather-icons": "github:erikflowers/weather-icons"
   },
   "devDependencies": {
     "@iconify-icons/bi": "^1.1.5",
