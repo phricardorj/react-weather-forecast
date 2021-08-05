@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
 *,
 *:before,
 *:after {
@@ -5,73 +7,60 @@
   padding: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  color: #000;
+body {
+  background-color: #f1f1f1 !important;
 }
 
 .container {
-  width: 750px;
-  margin: 0 auto;
+  margin: 0vh auto;
   text-align: center;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
     width: 100%;
-    padding: 10px;
   }
 }
 
-.container .app header {
-  padding-top: 20px;
-  font-size: 1.5rem;
+header {
+  min-height: 20vh;
+  background: #00fd13;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  text-align: center;
+  position: relative;
 }
 
-.container .app code {
+header h1 {
+  padding: 35px 0;
+}
+
+main {
+  position: absolute;
+  display: flex;
   width: 100%;
-  padding: 10px;
-}
-
-.container .app #version {
-  color: #00fd13;
+  flex-direction: row;
+  top: 15vh;
 }
 
 
-.container .app #info {
-  padding: 20px;
-}
-
-input {
+form input {
   border: none;
   width: 100%;
   outline: none;
   font-size: 1.2rem;
-}
-
-.input-icon-wrap {
-  border: 1px solid #cacaca;    
-  display: flex;
-  flex-direction: row;
   padding: 20px;
   border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.input-icon-wrap  {
-  flex: 1;
-  cursor: pointer;
-}
-
-
-
-.container .app  form button{
+form button {
   outline: 0;
   box-shadow: 0;
-  border: none;
+  border: 2px solid #00fd13;
   border-radius: 30px;
   margin-top: 10px;
   padding: 15px;
@@ -80,51 +69,46 @@ input {
   font-size: 1.2rem;
 }
 
-.container .app main h1{
-  color: #00fd13;
-  font-size: 2rem;
-  padding-top: 20px;
-}
-
-.container .app main h2{
-  color: #000;
-  font-size: 1rem;
-}
-
+/* Favoritos Syles */
 .fav-inline {
   display: flex;
   flex-wrap: initial;
   justify-content: space-between;
+  cursor: pointer;
   padding: 20px 0;
 }
 
-.fav-btn {
+.fav-inline .fav-btn {
   display: table;
   margin: 5px;
-  background: rgba(0, 253, 19, 1);
+  border: 2px solid #000;
   color: #000;
   border-radius: 20px;
   width: 100%;
   padding: 10px;
+  transition: 0.2s;
 }
 
-.fav-txt {
+.fav-inline .fav-btn:hover {
+  border: 2px solid #000;
+  background: #000;
+  color: #fff;
+}
+
+.fav-inline .fav-txt {
   display: table-cell;
   vertical-align: middle;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 
-footer{
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  font-size: 1.2rem;
-  padding: 10px;
-  background: #00fd13;
-}
+/* Card Syles */
 
-footer p{
-text-align: center;
-color: #000;
+.weather {
+  display: flex;
+  flex-flow: column wrap;
+  box-shadow: 0px 1px 10px 0px #cfcfcf;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

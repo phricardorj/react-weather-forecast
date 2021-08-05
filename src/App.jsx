@@ -5,17 +5,11 @@ function App() {
   return (
     <>
       <header>
-        <div className="container">
-          <h1>🌥️ Clima Brasil</h1>
-          <code>Aplicação React Js</code>
-          <code id="version">v1.1</code>
-        </div>
+        <h1>⛅ Pesquise seu clima!</h1>
       </header>
       <main>
         <div className="container">
-          <div className="app">
-            <Form />
-          </div>
+          <Form />
         </div>
       </main>
     </>
