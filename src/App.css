@@ -76,6 +76,7 @@ form button {
   justify-content: space-between;
   cursor: pointer;
   padding: 20px 0;
+  width: 100%;
 }
 
 .fav-inline .fav-btn {
