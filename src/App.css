@@ -76,7 +76,12 @@ form button {
   justify-content: space-between;
   cursor: pointer;
   padding: 20px 0;
-  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .fav-inline {
+    display: block;
+  }
 }
 
 .fav-inline .fav-btn {
@@ -104,7 +109,6 @@ form button {
 }
 
 /* Card Syles */
-
 .weather {
   display: flex;
   flex-flow: column wrap;
