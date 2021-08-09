@@ -15,15 +15,17 @@ function Response(props) {
   return (
     <>
       <i className="wi wi-night-sleet" />
-      <code>Ícone: {iWeather}</code>
+      <code>{iWeather}</code>
       <h1>{props.data.name}</h1>
-      <p>Temperatura: {parseInt(props.data.main.temp)} °C</p>
+      <p>Temperatura: {Math.round(props.data.main.temp)} °C</p>
       <p>Descrição: {props.data.weather[0]['description']}</p>
       <p>Chuva: {props.data.clouds.all} %</p>
       <p>Umidade: {props.data.main.humidity} %</p>
       <p>Pressão: {props.data.main.pressure} hPa</p>
       <p>Vento: {props.data.wind['deg']} °</p>
-      <p>Velocidade do Vento: {props.data.wind['speed']} m/s</p>
+      <p>
+        Velocidade do Vento: {Math.round(props.data.wind['speed'] * 3.6)} km/h
+      </p>
     </>
   )
 }
