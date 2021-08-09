@@ -18,7 +18,6 @@ function Response(props) {
       <code>Ícone: {iWeather}</code>
       <h1>{props.data.name}</h1>
       <p>Temperatura: {parseInt(props.data.main.temp)} °C</p>
-      <p>Temperatura: {parseInt(props.data.main.temp)} °C</p>
       <p>Descrição: {props.data.weather[0]['description']}</p>
       <p>Chuva: {props.data.clouds.all} %</p>
       <p>Umidade: {props.data.main.humidity} %</p>
