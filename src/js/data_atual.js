@@ -21,6 +21,6 @@ export function dataAtual() {
     ' ' +
     data.getHours() +
     ':' +
-    ('0' + (data.getMinutes() + 1)).slice(-2)
+    ('0' + (data.getMinutes() )).slice(-2)
   )
 }
