@@ -1,5 +1,6 @@
 import React from 'react'
-import weatherIcons from './icons.json'
+import weatherIcons from '../icons.json'
+import { dataAtual } from '../js/data_atual.js'
 
 function Response(props) {
   let prefix = 'wi wi-',
@@ -14,18 +15,33 @@ function Response(props) {
 
   return (
     <>
-      <i className="wi wi-night-sleet" />
-      <code>{iWeather}</code>
-      <h1>{props.data.name}</h1>
-      <p>Temperatura: {Math.round(props.data.main.temp)} °C</p>
-      <p>Descrição: {props.data.weather[0]['description']}</p>
-      <p>Chuva: {props.data.clouds.all} %</p>
-      <p>Umidade: {props.data.main.humidity} %</p>
-      <p>Pressão: {props.data.main.pressure} hPa</p>
-      <p>Vento: {props.data.wind['deg']} °</p>
-      <p>
-        Velocidade do Vento: {Math.round(props.data.wind['speed'] * 3.6)} km/h
-      </p>
+      <div className="card">
+        <div className="card-body">
+          <h1>{props.data.name}</h1>
+          <h2>{Math.round(props.data.main.temp)} °C</h2>
+          <h3 className="text-capitalize">
+            {props.data.weather[0]['description']}
+          </h3>
+          <br />
+          <h4>{dataAtual()}</h4>
+        </div>
+      </div>
+
+      <div className="info my-3">
+        <div className="row">
+          <div className="col-md-6">
+            <p>Pressão: {props.data.main.pressure} hPa</p>
+            <p>Chuva: {props.data.clouds.all} %</p>
+          </div>
+          <div className="col-md-6">
+            <p>
+              Vento: {props.data.wind['deg']} ° |{' '}
+              {Math.round(props.data.wind['speed'] * 3.6)} km/h
+            </p>
+            <p>Umidade: {props.data.main.humidity} %</p>
+          </div>
+        </div>
+      </div>
     </>
   )
 }

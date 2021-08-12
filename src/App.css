@@ -109,11 +109,17 @@ form button {
 }
 
 /* Card Syles */
-.weather {
+.card {
   display: flex;
   flex-flow: column wrap;
-  box-shadow: 0px 1px 10px 0px #cfcfcf;
   overflow: hidden;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.info p{
+  font-size: 1.5rem;
+  background: #fff;
   border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

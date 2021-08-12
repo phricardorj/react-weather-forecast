@@ -1,19 +1,20 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import Form from './components/Form'
 
-function App() {
-  return (
-    <>
-      <header>
-        <h1>⛅ Pesquise seu clima!</h1>
-      </header>
-      <main>
-        <div className="container">
-          <Form />
-        </div>
-      </main>
-    </>
-  )
-}
+import 'bootstrap/dist/css/bootstrap.css'
+import './App.css'
 
-export default App
+ReactDOM.render(
+  <React.StrictMode>
+    <header>
+      <h1>⛅ Pesquise seu clima!</h1>
+    </header>
+    <main>
+      <div className="container">
+        <Form />
+      </div>
+    </main>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
