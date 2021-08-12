@@ -9,9 +9,7 @@ function Viewer() {
   return (
     <>
       <header>
-        <h1>
-          <i className="wi wi-day-sunny"></i> Pesquise seu clima!
-        </h1>
+        <h1>⛅ Pesquise seu clima!</h1>
         <code>Desenvolvido por @phricardorj</code>
       </header>
       <main>
