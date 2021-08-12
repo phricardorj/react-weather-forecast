@@ -32,10 +32,11 @@ header {
   border-bottom-left-radius: 15px;
   text-align: center;
   position: relative;
+  padding: 35px 0;
 }
 
-header h1 {
-  padding: 35px 0;
+header code{
+  color: #000;
 }
 
 main {

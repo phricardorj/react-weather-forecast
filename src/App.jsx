@@ -9,6 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <header>
       <h1>⛅ Pesquise seu clima!</h1>
+      <code>Desenvolvido por @phricardorj</code>
     </header>
     <main>
       <div className="container">
