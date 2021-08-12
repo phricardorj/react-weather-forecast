@@ -17,6 +17,10 @@ export function dataAtual() {
     '/' +
     ('0' + (data.getMonth() + 1)).slice(-2) +
     '/' +
-    data.getFullYear()
+    data.getFullYear() +
+    ' ' +
+    data.getHours() +
+    ':' +
+    ('0' + (data.getMinutes() + 1)).slice(-2)
   )
 }
