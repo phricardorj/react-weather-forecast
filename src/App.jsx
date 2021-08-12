@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Form from './components/Form'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import './App.css'
+import './styles/App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'weather-icons/css/weather-icons.css'
 
 ReactDOM.render(
   <React.StrictMode>
