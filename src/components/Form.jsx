@@ -8,7 +8,7 @@ function Form() {
     [button, setButton] = useState('Pesquisar'),
     [favData, setFavData] = useState(['rio de janeiro', 'curitiba', 'salvador'])
 
-  async function handleGetWeather(event) {
+  async function FormGetWeather(event) {
     event.preventDefault()
 
     setButton('Carregando...')
@@ -20,13 +20,26 @@ function Form() {
     )
 
     setButton('Pesquisar')
+    setData(response.data)
+  }
 
+  async function FavGetWeather(search) {
+    setSearch(search)
+    setButton('Carregando...')
+
+    const response = await api.get(
+      'weather?q=' +
+        search +
+        ',br&units=metric&appid=baedc2f2f31b7b3303e5d42d88d283c3&mode=json&lang=pt_br'
+    )
+
+    setButton('Pesquisar')
     setData(response.data)
   }
 
   return (
     <>
-      <form onSubmit={handleGetWeather}>
+      <form onSubmit={FormGetWeather}>
         <div className="input-icon-wrap">
           <input
             type="text"
@@ -45,7 +58,13 @@ function Form() {
       {favData && (
         <div className="fav-inline">
           {favData.map((city, index) => (
-            <div className="fav-btn" key={index}>
+            <div
+              className="fav-btn"
+              key={index}
+              onClick={function () {
+                FavGetWeather(city)
+              }}
+            >
               <span className="fav-txt">{city}</span>
             </div>
           ))}
