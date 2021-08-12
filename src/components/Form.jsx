@@ -6,7 +6,11 @@ function Form() {
   const [data, setData] = useState(null),
     [search, setSearch] = useState(''),
     [button, setButton] = useState('Pesquisar'),
-    [favData, setFavData] = useState(['rio de janeiro', 'curitiba', 'salvador'])
+    [favData, setFavData] = useState([
+      'rio de janeiro',
+      'são carlos',
+      'salvador'
+    ])
 
   async function FormGetWeather(event) {
     event.preventDefault()

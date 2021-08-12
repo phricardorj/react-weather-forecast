@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  font-family: 'Varela Round', sans-serif;
-}
-
 body {
   background-color: #f1f1f1 !important;
 }
@@ -33,6 +23,10 @@ header {
   text-align: center;
   position: relative;
   padding: 35px 0;
+}
+
+header i{
+  color: #fff;
 }
 
 header code{
@@ -123,4 +117,8 @@ form button {
   background: #fff;
   border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.iWeather {
+  color: #00fd13;
 }
