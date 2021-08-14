@@ -13,6 +13,8 @@ function Response(props) {
 
   let iWeather = prefix + icon
 
+  console.log(props.data)
+
   return (
     <>
       <div className="card">
@@ -22,6 +24,10 @@ function Response(props) {
           </div>
           <h1>{props.data.name}</h1>
           <h2>{Math.round(props.data.main.temp)} °C</h2>
+          <p>
+            {Math.round(props.data.main.temp_min)} °C /{' '}
+            {Math.round(props.data.main.temp_max)} °C
+          </p>
           <h3 className="text-capitalize">
             {props.data.weather[0]['description']}
           </h3>
