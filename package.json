@@ -14,6 +14,7 @@
     "weather-icons": "git+https://github.com/erikflowers/weather-icons.git"
   },
   "devDependencies": {
+    "@iconify/react": "^3.0.0",
     "@vitejs/plugin-react-refresh": "^1.3.1",
     "vite": "^2.4.4"
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import weatherIcons from '../icons.json'
+import weatherIcons from '../../public/icons.json'
 import { dataAtual } from '../js/data_atual.js'
 
 function Response(props) {
@@ -12,8 +12,6 @@ function Response(props) {
   }
 
   let iWeather = prefix + icon
-
-  console.log(props.data)
 
   return (
     <>
