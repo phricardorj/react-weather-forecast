@@ -19,7 +19,7 @@ export function dataAtual() {
     '/' +
     data.getFullYear() +
     ' ' +
-    data.getHours() +
+    ('0' + (data.getHours() )).slice(-2) +
     ':' +
     ('0' + (data.getMinutes() )).slice(-2)
   )
