@@ -3,15 +3,7 @@ import weatherIcons from '../../public/icons.json'
 import { dataAtual } from '../js/data_atual.js'
 
 function Response(props) {
-  let prefix = 'wi wi-',
-    code = props.data.weather[0]['id'],
-    icon = weatherIcons[code].icon
-
-  if (!(code > 699 && code < 800) && !(code > 899 && code < 1000)) {
-    icon = 'day-' + icon
-  }
-
-  let iWeather = prefix + icon
+  let iWeather = weatherIcons[props.data.weather[0].icon].icon
 
   return (
     <>
