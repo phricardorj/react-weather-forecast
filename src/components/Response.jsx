@@ -44,7 +44,7 @@ function Response(props) {
           <div className="col-md-6">
             <p>
               <i className="wi wi-strong-wind"></i> Vento:{' '}
-              {props.data.wind['deg']} ° |
+              {props.data.wind['deg']} ° |{' '}
               {Math.round(props.data.wind['speed'] * 3.6)} km/h
             </p>
             <p>
