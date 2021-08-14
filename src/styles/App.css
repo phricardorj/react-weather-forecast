@@ -28,25 +28,32 @@ header {
   padding-top: 40px;
 }
 
-header div {
-  position: relative;
-  padding-bottom: 50px;
-}
-
-header i{
+header i, code{
   color: #000;
 }
 
-header code{
-  color: #000;
-}
-
-main {
-  position: absolute;
-  display: flex;
+main .container {
   width: 100%;
-  flex-direction: row;
-  top: 15vh;
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+footer{
+  width: 100%;
+  color: #000;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(102, 48, 248);
+}
+
+footer a:hover {
+  color: rgb(48, 0, 182);
 }
 
 form input {
@@ -128,27 +135,4 @@ form button {
 
 .iWeather i{
   color: #00fd13;
-}
-
-footer{
-  color: #000;
-  width: 100%;
-  min-height: 50px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-footer p {
-  text-align: center;
-  padding: 10px;
-}
-
-footer a {
-  text-decoration: none;
-  color: rgb(102, 48, 248);
-}
-
-footer a:hover {
-  color: rgb(48, 0, 182);
 }
