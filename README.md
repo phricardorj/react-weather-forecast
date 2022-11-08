@@ -9,7 +9,7 @@
 
 ### 😁 Usuário
 
-Você poderá [clicar aqui](https://weather-forecast-rust.vercel.app/) para **acessar** o projeto on-line e testar agora mesmo!
+Você poderá [clicar aqui](https://reactforecast.vercel.app/) para **acessar** o projeto on-line e testar agora mesmo!
 
 ### 👨‍🚀 Desenvolvedor
 
