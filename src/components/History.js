@@ -10,7 +10,13 @@ const History = () => {
         ? false
         : true && (
             <div style={{ marginTop: "2.5rem" }}>
-              <p>Seu Histórico de Pesquisa ({global.history.length}):</p>
+              <p>
+                Últimas consultas{" "}
+                <code>
+                  (Mostrando {global.history.length} de{" "}
+                  {global.numberHistoryDisplay} possíveis):
+                </code>
+              </p>
               <ul
                 style={{
                   border: "2px solid #62dafc",

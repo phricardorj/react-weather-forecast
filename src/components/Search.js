@@ -3,7 +3,10 @@ import { GlobalContext } from "../context/GlobalContext";
 
 const Search = () => {
   const global = React.useContext(GlobalContext);
+
   const [button, setButton] = React.useState("Pesquisar");
+  const [error, setError] = React.useState(null);
+  const inputElement = React.useRef();
 
   const getApiData = async () => {
     let json;
@@ -16,6 +19,15 @@ const Search = () => {
     setButton("Pesquisar");
   };
 
+  const handleBlur = ({ target }) => {
+    if (target.value === "") {
+      inputElement.current.focus();
+      setError("Preencha o campo");
+    }
+    setError(null);
+    return null;
+  };
+
   return (
     <>
       <label style={{ marginBottom: "1rem" }}>
@@ -24,7 +36,11 @@ const Search = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          if (global.searchInput === "") return null;
+          if (global.searchInput === "") {
+            inputElement.current.focus();
+            setError("Preencha o campo");
+            return null;
+          }
           setButton("Carregando");
           getApiData();
         }}
@@ -33,8 +49,11 @@ const Search = () => {
           type="text"
           value={global.searchInput}
           onChange={({ target }) => global.setSearchInput(target.value)}
+          onBlur={handleBlur}
+          ref={inputElement}
           placeholder="Bahia ou Salvador"
         ></input>
+        {error && <p style={{ color: "red" }}>* {error}</p>}
         <button style={{ marginTop: "1rem", width: "100%" }}>{button}</button>
       </form>
     </>

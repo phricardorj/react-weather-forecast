@@ -37,6 +37,7 @@ export const GlobalStorage = ({ children }) => {
         setSearchInput,
         setResponse,
         updateHistory,
+        numberHistoryDisplay,
       }}
     >
       {children}
