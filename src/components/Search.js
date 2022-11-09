@@ -24,6 +24,7 @@ const Search = () => {
       inputElement.current.focus();
       setError("Preencha o campo");
     }
+    inputElement.current.blur();
     setError(null);
     return null;
   };

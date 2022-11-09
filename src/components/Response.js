@@ -16,6 +16,7 @@ const Rsponse = () => {
           padding: "10px",
           borderRadius: "10px",
           textAlign: "center",
+          margin: "2rem 0",
         }}
       >
         <strong>Erro:</strong> Cidade ou Estado digitado não encontrado!{" "}
