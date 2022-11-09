@@ -1,5 +1,6 @@
 import React from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import icons from "../icons.json";
 
 const Rsponse = () => {
   const global = React.useContext(GlobalContext);
@@ -24,6 +25,19 @@ const Rsponse = () => {
 
   return (
     <>
+      <div style={{ display: "flex" }}>
+        <i
+          className={icons[data.weather[0].icon].icon}
+          style={{
+            fontSize: "8rem",
+            color: "#000",
+            margin: "0 0 1rem",
+          }}
+        ></i>
+        <p style={{ fontSize: "2rem", textTransform: "Capitalize" }}>
+          {data.weather[0]["description"]}
+        </p>
+      </div>
       <h3>Informações do Tempo:</h3>
       <ul>
         <li>Local: {data.name}</li>
@@ -32,8 +46,6 @@ const Rsponse = () => {
           Temperatura (Min/Max): {Math.round(data.main.temp_min)} °C /{" "}
           {Math.round(data.main.temp_max)} °C
         </li>
-        <li>{data.weather[0]["description"]}</li>
-        <li>icon: {data.weather[0].icon}</li>
       </ul>
     </>
   );

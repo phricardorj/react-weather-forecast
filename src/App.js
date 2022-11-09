@@ -5,6 +5,7 @@ import Search from "./components/Search";
 import History from "./components/History";
 import Response from "./components/Response";
 import Footer from "./components/Footer";
+import "weather-icons/css/weather-icons.css";
 
 const App = () => {
   return (
