@@ -19,16 +19,6 @@ const Search = () => {
     setButton("Pesquisar");
   };
 
-  const handleBlur = ({ target }) => {
-    if (target.value === "") {
-      inputElement.current.focus();
-      setError("Preencha o campo");
-    }
-    inputElement.current.blur();
-    setError(null);
-    return null;
-  };
-
   return (
     <>
       <label style={{ marginBottom: "1rem" }}>
@@ -49,8 +39,15 @@ const Search = () => {
         <input
           type="text"
           value={global.searchInput}
-          onChange={({ target }) => global.setSearchInput(target.value)}
-          onBlur={handleBlur}
+          onChange={({ target }) => {
+            if (target.value === "") {
+              inputElement.current.focus();
+              setError("Preencha o campo");
+            } else {
+              setError(null);
+            }
+            global.setSearchInput(target.value);
+          }}
           ref={inputElement}
           placeholder="Bahia ou Salvador"
         ></input>
