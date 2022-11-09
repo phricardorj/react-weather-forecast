@@ -14,7 +14,6 @@ const Search = () => {
     global.setResponse(json);
     global.updateHistory(json.name);
     setButton("Pesquisar");
-    console.clear();
   };
 
   return (
@@ -25,6 +24,7 @@ const Search = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
+          if (global.searchInput === "") return null;
           setButton("Carregando");
           getApiData();
         }}
