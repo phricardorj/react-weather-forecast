@@ -8,7 +8,7 @@ const Search = () => {
   const getApiData = async () => {
     let json;
     const data = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${global.searchInput},br&units=metric&appid=baedc2f2f31b7b3303e5d42d88d283c3&mode=json&lang=pt_br`
+      `https://api.openweathermap.org/data/2.5/weather?q=${global.searchInput},br&units=metric&appid=baedc2f2f31b7b3303e5d42d88d283c3&mode=json&lang=pt_br`
     );
     json = await data.json();
     global.setResponse(json);
