@@ -33,6 +33,7 @@ h1,
 h2,
 h3 {
   font-family: var(--font-title);
+  color: var(--color-dark);
 }
 
 h1,
@@ -44,7 +45,9 @@ ul {
 }
 
 ul {
-  list-style: square;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -104,4 +107,8 @@ button:disabled {
 hr {
   border: 2px solid black;
   margin: 2rem auto;
+}
+
+strong {
+  color: var(--color-dark);
 }

@@ -25,30 +25,72 @@ const Rsponse = () => {
     );
 
   return (
-    <>
-      <div style={{ display: "flex" }}>
+    <div style={{ margin: "3rem 0 0" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "15px",
+        }}
+      >
         <i
           className={icons[data.weather[0].icon].icon}
           style={{
             fontSize: "8rem",
-            color: "#000",
-            margin: "0 0 1rem",
+            color: "#62dafc",
           }}
         ></i>
-        <p style={{ fontSize: "2rem", textTransform: "Capitalize" }}>
-          {data.weather[0]["description"]}
-        </p>
+        <div style={{ textAlign: "right", lineHeight: "1.5rem" }}>
+          <h1 style={{ textTransform: "capitalize", fontSize: "3rem" }}>
+            {data.name}
+          </h1>
+          <p
+            style={{
+              textTransform: "capitalize",
+              fontSize: "1.5rem",
+            }}
+          >
+            <strong style={{ color: "#000" }}>
+              {data.weather[0]["description"]}
+            </strong>
+          </p>
+        </div>
       </div>
-      <h3>Informações do Tempo:</h3>
-      <ul>
-        <li>Local: {data.name}</li>
-        <li>Temperatura: {Math.round(data.main.temp)} °C</li>
-        <li>
-          Temperatura (Min/Max): {Math.round(data.main.temp_min)} °C /{" "}
-          {Math.round(data.main.temp_max)} °C
-        </li>
-      </ul>
-    </>
+      <div
+        style={{
+          border: "2px solid #62dafc",
+          borderRadius: "10px",
+        }}
+      >
+        <ul style={{ padding: "20px" }}>
+          <li>
+            <strong>Temperatura:</strong> {Math.round(data.main.temp)} °C (
+            {Math.round(data.main.temp_min)} °C /{" "}
+            {Math.round(data.main.temp_max)} °C)
+          </li>
+          <li>
+            <strong>Chuva:</strong> {data.clouds.all}%
+          </li>
+          <li>
+            <strong>Umidade:</strong> {data.main.humidity}%
+          </li>
+          <li>
+            <strong>Pressão:</strong> {data.main.pressure} hPa
+          </li>
+          <li>
+            <strong>Vento:</strong> {data.wind["deg"]} °
+          </li>
+          <li>
+            <strong>Velocidade do Vento:</strong> {data.wind["speed"]} m/s
+          </li>
+          <li>
+            <strong>Velocidade do Vento:</strong>{" "}
+            {Math.round(data.wind["speed"] * 3.6)} km/h
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 };
 
